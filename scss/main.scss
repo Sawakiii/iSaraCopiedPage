@@ -1,0 +1,877 @@
+// --------------------------
+// TOPへ戻るのスタイル
+// --------------------------
+html {
+    scroll-behavior: smooth;
+}
+
+.go-to-top {
+    opacity: 0;
+    transition-property: opacity;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.go-to-top-on-scroll {
+    opacity: 1;
+    transition-property: opacity;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 207, 207);
+    position: fixed;
+    z-index: 10;
+    right: 50px;
+    bottom: 100px;
+    div {
+        position: relative;
+        top: 40px;
+        right: -30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        border-top: 10px solid black;
+        border-right: 10px solid black;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+
+// --------------------------
+// 全体のスタイル
+// --------------------------
+
+body {
+    width: 100%;
+    text-align: center;
+}
+$pc: 1024px;
+$sp: 600px;
+$base-margin-top: 3%;
+$base-color: #ebb94d;
+$small-font-size: 1.0rem;
+
+@media screen and (max-width: $sp) {
+    body {
+        font-size: 62.5%;
+    }
+}
+
+@mixin fileGet {
+    display: flex;
+    background-color: #da6b64;
+    color: aliceblue;
+    padding: 0.5% 2%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    &:hover {
+        background-color: red;
+    }
+}
+
+$header-margin-top: 3%;
+:export {
+    headerMarginTop: $header-margin-top;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 2em;
+    line-height: 1.8;
+}
+h4 {
+    font-size: 1.3em;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+.wrap {
+    display: flex;
+}
+
+.kagikakko {
+    position: relative;
+    width: 80%;
+    padding: 3% 3%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    &::before, &::after {
+    position: absolute;
+    content: '';
+    width: 5%;
+    height: 40%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    &::before {
+    top: 0;
+    left: 0;
+    border-top: 4px solid #ebb94d;
+    border-left: 4px solid #ebb94d;
+    }
+    &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid #ebb94d;
+    border-right: 4px solid #ebb94d;
+    }
+}
+
+.kakoi {
+    width: 80%;
+    margin: $base-margin-top auto 0;
+    background-color: #fff;
+    border: solid 3px #ebb94d;
+    border-radius: 5px;
+    padding: $base-margin-top 0;
+}
+
+#question, #about, #canLearnFromIsara, #merit, #member, #QandA, #flow, #studentBonus, #notVolunteer, #fileGetForm, #FAQ, footer {
+    padding: 5% 0;
+    
+}
+// --------------------------
+// headerのスタイル
+// --------------------------
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    // height: 25%;
+    padding: 1% 3.5%;
+    z-index: 10;
+    div {
+        display: flex;
+        img {
+            width: 14%;
+        }
+        h5 {
+            margin-top: 2.5%;
+            // margin-top: $header-margin-top;
+        }
+        
+    }
+    a {
+        @include fileGet;
+    }
+}
+
+
+
+@media screen and (max-width: $sp) {
+    header {
+        div {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+// --------------------------
+// eyecatchのスタイル
+// --------------------------
+
+
+#eyecatch {
+    background-image: url(../img/main.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 5%;
+    padding: 10% 10%;
+    
+    img {
+        width: 30%;
+    }
+    
+
+}
+
+
+
+
+// --------------------------
+// catch-copyのスタイル
+// --------------------------
+#catch-copy {
+    background-color: #ebb94d;
+    text-align: center;
+    color: aliceblue;
+    padding: 2.5% 0;
+    a {
+        @include fileGet;
+        padding: 3% 2%;
+        width: 70%;
+        border-radius: 80px;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    h4 {
+        line-height: 1.6;
+    }
+    .catch-copy-margin-top-class {
+        margin-top: 3%;
+    }
+    .stress-content {
+        background-color: #fff;
+        color: #da6b64;
+        display: inline-block;
+    }
+}
+
+// --------------------------
+// questionのスタイル
+// --------------------------
+
+#question {
+    text-align: center;
+    background-image: url(../img/introbottom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    p {
+        margin-top: 3%;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+
+
+// --------------------------
+// aboutのスタイル
+// --------------------------
+
+
+
+
+#about {
+    background-color: #fef5e0;
+    text-align: center;
+    
+    .about-header {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        background-color: $base-color;
+        color: #fff;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        margin: -100px auto 0;
+        p {
+            font-size: 1.0rem;
+        }
+    }
+    h2 {
+        margin-top: $base-margin-top;
+    }
+    h4 {
+        margin-top: $base-margin-top;
+    }
+    .skill-wrap {
+        
+        h4 {
+            margin: 0;
+        }
+        .wrap {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: $base-margin-top;
+            .skill {
+                margin-left: 5%;
+                display: table-cell;
+                vertical-align: baseline;
+                padding: 1% 0;
+                &:first-child {
+                    margin: 0;
+                }
+                &:nth-child(2) {
+                    padding: 0;
+                }
+                p {
+                    font-size: 0.7rem;
+                    margin-top: 8%;
+                }
+            }
+            
+        }
+    }
+
+}
+
+// --------------------------
+// stepのスタイル
+// --------------------------
+#step {
+    background-image: url(../img/aboutsecondbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: $base-margin-top 5%;
+    h2 {
+        margin-top: $base-margin-top;
+    }
+    h4 {
+        margin-top: $base-margin-top;
+        span {
+            color: $base-color;
+        }
+    }
+    .step-wrap {
+        justify-content: space-between;
+        margin-top: $base-margin-top;
+        .step-box {
+            width: 31%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 3% 0;
+            .step {
+                background-color: $base-color;
+                width: 85%;
+                border-radius: 5px;
+                padding: 1% 0;
+                margin: auto;
+                font-weight: bold;
+            }
+            
+            p {
+                color: black;
+                font-weight: bold;
+                margin-top: 3%;
+                font-size: 1.1rem;
+            }
+            .step-time {
+                margin-top: 10%;
+                font-size: 1.0rem;
+
+            }
+        }
+    }
+}
+#blue-point {
+    background-color: #016ea9;
+    color: #fff;
+    text-align: center;
+    padding: $base-margin-top 0;
+    h4 {
+        margin-top: $base-margin-top;
+        &:first-child {
+            margin: 0;
+        }
+        span {
+            color: $base-color;
+        }
+    }
+}
+
+// --------------------------
+// canLearnFronIsaraのスタイル
+// --------------------------
+
+#canLearnFromIsara {
+    .wrap {
+        margin-top: $base-margin-top;
+        justify-content: center;
+                img {
+                    width: 200px;
+                    margin-left: 3%;
+                    &:first-child {
+                        margin: 0;
+                    }
+                }
+    }
+    p {
+        margin-top: $base-margin-top;
+    }
+    
+}
+
+// --------------------------
+// meritのスタイル
+// --------------------------
+#merit {
+    background-color: #fef5e0;
+    .kagikakko {
+        h2 {
+            margin-top: $base-margin-top;
+        }
+    }
+    .merit-wrap {
+        margin: 3% 5%;
+        justify-content: space-between;
+        .merit {
+            width: 30%;
+            text-align: left;
+            img {
+                width: 100%;
+
+            }
+            h4 {
+                margin-top: $base-margin-top;
+                color: #ebb94d;
+            }
+            p {
+                margin-top: $base-margin-top;
+                font-size: 1.0rem;
+            }
+        }
+    }
+    .kakoi {
+        h2 {
+            color: #ebb94d;
+        }
+        h4 {
+            margin-top: $base-margin-top;
+        }
+        p {
+            margin-top: $base-margin-top;
+            font-size: 1.0rem;
+            font-weight: bold;
+        }
+
+    }
+    .okotowari {
+        margin-top: $base-margin-top;
+        font-size: 0.9rem;
+    }
+}
+
+// --------------------------
+// memberのスタイル
+// --------------------------
+#member {
+    background-image: url(../img/teacherbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 7% 20%;
+    p {
+        margin-top: $base-margin-top;
+    }
+    .wrap {
+        justify-content: space-between;
+        margin-top: $base-margin-top;
+        .member {
+            width: 45%;
+            img {
+                border-radius: 50%;
+            }
+            div {
+                padding: 10% 10%;
+                margin-top: -5%;
+                border: solid 5px white;
+                p {
+                    margin-top: $base-margin-top;
+                    font-size: 1.1rem;
+                }
+
+            }
+        }
+    }
+}
+
+// --------------------------
+// QandAのスタイル
+// --------------------------
+#QandA {
+    background-color: $base-color;
+    #QandA-decolation {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        color: $base-color;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    h2 {
+        color: #fff;
+        &::before, &::after {
+            border-color: #fff;
+        }
+    }
+}
+// --------------------------
+// itComesTrueのスタイル
+// --------------------------
+#itComesTrue {
+    padding: 0 0 $base-margin-top;
+    .pentagon {
+        display: inline-block;
+        border-top: solid 25px $base-color;
+        border-right: solid 25px transparent;
+        border-bottom: solid 25px transparent;
+        border-left: solid 25px transparent; 
+    }
+    p {
+        margin-top: $base-margin-top; 
+        font-size: $small-font-size;
+        color: gray;
+    }
+    .bold {
+        font-weight: bold;
+        color: black;
+    }
+    .company-voice {
+        padding: 0 20%;
+        margin-top: $base-margin-top;
+        img {
+            width: 250px;
+            border: solid 2px $base-color;
+        }
+        div {
+            padding: 5% 5%;
+            text-align: left;
+            .company-name {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+// --------------------------
+// whatWeLeaernのスタイル
+// --------------------------
+#whatWeLearn {
+    padding: $base-margin-top 20%;
+    background-image: url(../img/classbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    h2 {
+
+    }
+    p {
+        margin-top: $base-margin-top;
+    }
+    .table-wrap {
+        justify-content: space-between;
+        table {
+            width: 47%;
+            border-collapse: collapse;
+            border: solid 2px #016ea9;
+            tr {
+                &:last-child {
+                    border-bottom: none;
+                }
+                th {
+                    padding: 7% 0;
+                    background-color: #016ea9;
+                    color: #fff;
+                }
+                td {
+                    padding: 7% 0;
+                    font-weight: bold;
+                    border-bottom: dotted 2px rgb(204, 204, 204);
+                    background-color: #fff;
+                    color: black;
+                }
+            }
+    
+        }
+    }
+}
+
+// --------------------------
+// flowのスタイル
+// --------------------------
+#flow {
+    .flow-img {
+        margin-top: $base-margin-top;
+    }
+    .flow-section {
+        background-color: #fef5e0;
+        border-radius: 20px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.5% 5%;
+        justify-content: space-between;
+        .flow-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                align-self: center;
+            }
+            h4 {
+                margin-top: 10%;
+                font-size: 1.1rem;
+            }
+        }
+        .flow-detail {
+            width: 80%;
+            text-align: left;
+            p {
+                font-size: $small-font-size;
+                font-weight: bold;
+                margin-top: $base-margin-top;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+            .small-p {
+                font-weight: normal;
+            }
+        }
+    }
+    .flow-section1 {
+        margin-top: $base-margin-top;
+    }
+}
+// --------------------------
+// whyBankkokのスタイル
+// --------------------------
+#whyBangkok {
+    background-image: url(../img/bangkokbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    padding: 5% 5%;
+    p {
+        font-size: $small-font-size;
+        margin-top: $base-margin-top;
+    }
+    ul {
+        margin-top: $base-margin-top;
+        padding-left: 2%;
+        li {
+            list-style: disc;
+            margin-top: 2%;
+            font-weight: bold;
+        }
+    }
+    h4 {
+        margin-top: $base-margin-top;
+    }
+}
+// --------------------------
+// studentBonusのスタイル
+// --------------------------
+#studentBonus {
+    background-color: $base-color;
+    p {
+        margin-top: $base-margin-top;
+        font-size: $small-font-size;
+        color: #fff;
+    }
+    .student-bonus {
+        margin-top: 5%;
+        h2 {
+            width: 40%;
+            display: inline-block;
+            background-color: $base-color;
+            transform: translateY(25px);
+        }
+        .student-bonus-wrap {
+            border: solid 3px #fff;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto 0;
+            padding: 5% 5%;
+            .student-bonus-circle {
+                border-radius: 50%;
+                background-color: #fff;
+                width: 250px;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h4 {
+                    font-weight: normal;
+                    color: $base-color;
+                }
+                p {
+                    margin-top: 10%;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+// --------------------------
+// notVolunteerのスタイル
+// --------------------------
+#notVolunteer {
+    background-image: url(../img/specialdetail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    h4 {
+        margin-top: $base-margin-top;
+        line-height: 1.6;
+    }
+    .kagikakko {
+        &::before, &::after {
+            border-color: #fff;
+        }
+    }
+}
+// --------------------------
+// messageのスタイル
+// --------------------------
+#message {
+    padding: 5% 15%;
+    h4 {
+        margin-top: $base-margin-top;
+    }
+    #message-detail {
+        margin-top: 6%;
+        justify-content: space-between;
+        img {
+            align-self: flex-start;
+            object-fit: contain;
+            width: 200px;
+            height: auto;
+            margin-right: 5%;
+        }
+        div {
+            text-align: left;
+            p {
+                font-size: 0.9rem;
+                margin-top: $base-margin-top;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+            ul {
+                margin-top: $base-margin-top;
+                padding-left: 10px;
+                li {
+                    list-style: disc;
+                    font-size: 0.9rem;
+                    margin-top: $base-margin-top;
+                }
+            }
+
+        }
+    }
+}
+// --------------------------
+// fileGetFormのスタイル
+// --------------------------
+#fileGetForm {
+    background-color: $base-color;
+    p {
+        margin-top: $base-margin-top;
+    }
+    .fileGet-form {
+        margin-top: $base-margin-top;
+        border-radius: 10px;
+        padding: 1.5% 0.5%;
+        width: 65%;
+        appearance: none;
+    }
+    #fileGet-form {
+        margin-top: 6%;
+        border-radius: 10px;
+        padding: 1.5% 0.5%;
+        width: 65%;
+        appearance: none;
+    }
+    a {
+        @include fileGet;
+        padding: 1% 2%;
+        width: 70%;
+        border-radius: 80px;
+        margin: $base-margin-top auto 0;
+        font-weight: bold;
+        font-size: 2em;
+    }
+}
+// --------------------------
+// よくある質問のスタイル
+// --------------------------
+#FAQ {
+    width: 70%;
+    margin: 0 auto;
+    
+    .question-button {
+        border: solid 2px rgb(194, 193, 193);
+        padding: 2% 2%;
+        margin-top: 0.2%;
+        cursor: pointer;
+        justify-content: space-between;
+        &:hover {
+            text-decoration: underline;
+        }
+        h4 {
+
+        }
+        .bottom-arrow {
+            position: relative;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border-top: 5px solid rgb(194, 193, 193);
+            border-right: 5px solid rgb(194, 193, 193);
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        .up-arrow {
+            position: relative;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border-top: 5px solid rgb(194, 193, 193);
+            border-right: 5px solid rgb(194, 193, 193);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+    .hide-p {
+        display: none;
+    }
+    .open-p {
+        padding: 2.5% 2.5%;
+        display: block;
+        font-size: $small-font-size;
+        font-weight: bold;
+        
+    }
+    .question-button1 {
+        margin-top: $base-margin-top;
+    }
+}
+// --------------------------
+// footerのスタイル
+// --------------------------
+footer {
+    background-color: rgb(223, 221, 221);
+    small {
+        display: block;
+        font-size: 0.7rem;
+    }
+    .sns-wrap {
+        justify-content: center;
+        margin-top: 1%;
+        .twitter-share-button {
+            margin-right: 5px;
+        }
+    }
+}
+
+
+

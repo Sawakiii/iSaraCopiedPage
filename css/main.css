@@ -1,0 +1,613 @@
+html {
+  scroll-behavior: smooth; }
+
+.go-to-top {
+  opacity: 0;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  transition-duration: 1s; }
+
+.go-to-top-on-scroll {
+  opacity: 1;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  transition-duration: 1s;
+  width: 100px;
+  height: 100px;
+  background-color: #d1cfcf;
+  position: fixed;
+  z-index: 10;
+  right: 50px;
+  bottom: 100px; }
+  .go-to-top-on-scroll div {
+    position: relative;
+    top: 40px;
+    right: -30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+body {
+  width: 100%;
+  text-align: center; }
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 62.5%; } }
+:export {
+  headerMarginTop: 3%; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 2em;
+  line-height: 1.8; }
+
+h4 {
+  font-size: 1.3em; }
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.6; }
+
+.wrap {
+  display: flex; }
+
+.kagikakko {
+  position: relative;
+  width: 80%;
+  padding: 3% 3%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  .kagikakko::before, .kagikakko::after {
+    position: absolute;
+    content: '';
+    width: 5%;
+    height: 40%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .kagikakko::before {
+    top: 0;
+    left: 0;
+    border-top: 4px solid #ebb94d;
+    border-left: 4px solid #ebb94d; }
+  .kagikakko::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid #ebb94d;
+    border-right: 4px solid #ebb94d; }
+
+.kakoi {
+  width: 80%;
+  margin: 3% auto 0;
+  background-color: #fff;
+  border: solid 3px #ebb94d;
+  border-radius: 5px;
+  padding: 3% 0; }
+
+#question, #about, #canLearnFromIsara, #merit, #member, #QandA, #flow, #studentBonus, #notVolunteer, #fileGetForm, #FAQ, footer {
+  padding: 5% 0; }
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  padding: 1% 3.5%;
+  z-index: 10; }
+  header div {
+    display: flex; }
+    header div img {
+      width: 14%; }
+    header div h5 {
+      margin-top: 2.5%; }
+  header a {
+    display: flex;
+    background-color: #da6b64;
+    color: aliceblue;
+    padding: 0.5% 2%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px; }
+    header a:hover {
+      background-color: red; }
+
+@media screen and (max-width: 600px) {
+  header div {
+    flex-direction: column-reverse; } }
+#eyecatch {
+  background-image: url(../img/main.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 5%;
+  padding: 10% 10%; }
+  #eyecatch img {
+    width: 30%; }
+
+#catch-copy {
+  background-color: #ebb94d;
+  text-align: center;
+  color: aliceblue;
+  padding: 2.5% 0; }
+  #catch-copy a {
+    display: flex;
+    background-color: #da6b64;
+    color: aliceblue;
+    padding: 0.5% 2%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 3% 2%;
+    width: 70%;
+    border-radius: 80px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 2em; }
+    #catch-copy a:hover {
+      background-color: red; }
+  #catch-copy h4 {
+    line-height: 1.6; }
+  #catch-copy .catch-copy-margin-top-class {
+    margin-top: 3%; }
+  #catch-copy .stress-content {
+    background-color: #fff;
+    color: #da6b64;
+    display: inline-block; }
+
+#question {
+  text-align: center;
+  background-image: url(../img/introbottom.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #question p {
+    margin-top: 3%; }
+    #question p span {
+      font-weight: bold; }
+
+#about {
+  background-color: #fef5e0;
+  text-align: center; }
+  #about .about-header {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: #ebb94d;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: -100px auto 0; }
+    #about .about-header p {
+      font-size: 1.0rem; }
+  #about h2 {
+    margin-top: 3%; }
+  #about h4 {
+    margin-top: 3%; }
+  #about .skill-wrap h4 {
+    margin: 0; }
+  #about .skill-wrap .wrap {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3%; }
+    #about .skill-wrap .wrap .skill {
+      margin-left: 5%;
+      display: table-cell;
+      vertical-align: baseline;
+      padding: 1% 0; }
+      #about .skill-wrap .wrap .skill:first-child {
+        margin: 0; }
+      #about .skill-wrap .wrap .skill:nth-child(2) {
+        padding: 0; }
+      #about .skill-wrap .wrap .skill p {
+        font-size: 0.7rem;
+        margin-top: 8%; }
+
+#step {
+  background-image: url(../img/aboutsecondbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 3% 5%; }
+  #step h2 {
+    margin-top: 3%; }
+  #step h4 {
+    margin-top: 3%; }
+    #step h4 span {
+      color: #ebb94d; }
+  #step .step-wrap {
+    justify-content: space-between;
+    margin-top: 3%; }
+    #step .step-wrap .step-box {
+      width: 31%;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 3% 0; }
+      #step .step-wrap .step-box .step {
+        background-color: #ebb94d;
+        width: 85%;
+        border-radius: 5px;
+        padding: 1% 0;
+        margin: auto;
+        font-weight: bold; }
+      #step .step-wrap .step-box p {
+        color: black;
+        font-weight: bold;
+        margin-top: 3%;
+        font-size: 1.1rem; }
+      #step .step-wrap .step-box .step-time {
+        margin-top: 10%;
+        font-size: 1.0rem; }
+
+#blue-point {
+  background-color: #016ea9;
+  color: #fff;
+  text-align: center;
+  padding: 3% 0; }
+  #blue-point h4 {
+    margin-top: 3%; }
+    #blue-point h4:first-child {
+      margin: 0; }
+    #blue-point h4 span {
+      color: #ebb94d; }
+
+#canLearnFromIsara .wrap {
+  margin-top: 3%;
+  justify-content: center; }
+  #canLearnFromIsara .wrap img {
+    width: 200px;
+    margin-left: 3%; }
+    #canLearnFromIsara .wrap img:first-child {
+      margin: 0; }
+#canLearnFromIsara p {
+  margin-top: 3%; }
+
+#merit {
+  background-color: #fef5e0; }
+  #merit .kagikakko h2 {
+    margin-top: 3%; }
+  #merit .merit-wrap {
+    margin: 3% 5%;
+    justify-content: space-between; }
+    #merit .merit-wrap .merit {
+      width: 30%;
+      text-align: left; }
+      #merit .merit-wrap .merit img {
+        width: 100%; }
+      #merit .merit-wrap .merit h4 {
+        margin-top: 3%;
+        color: #ebb94d; }
+      #merit .merit-wrap .merit p {
+        margin-top: 3%;
+        font-size: 1.0rem; }
+  #merit .kakoi h2 {
+    color: #ebb94d; }
+  #merit .kakoi h4 {
+    margin-top: 3%; }
+  #merit .kakoi p {
+    margin-top: 3%;
+    font-size: 1.0rem;
+    font-weight: bold; }
+  #merit .okotowari {
+    margin-top: 3%;
+    font-size: 0.9rem; }
+
+#member {
+  background-image: url(../img/teacherbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 7% 20%; }
+  #member p {
+    margin-top: 3%; }
+  #member .wrap {
+    justify-content: space-between;
+    margin-top: 3%; }
+    #member .wrap .member {
+      width: 45%; }
+      #member .wrap .member img {
+        border-radius: 50%; }
+      #member .wrap .member div {
+        padding: 10% 10%;
+        margin-top: -5%;
+        border: solid 5px white; }
+        #member .wrap .member div p {
+          margin-top: 3%;
+          font-size: 1.1rem; }
+
+#QandA {
+  background-color: #ebb94d; }
+  #QandA #QandA-decolation {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    color: #ebb94d;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; }
+  #QandA h2 {
+    color: #fff; }
+    #QandA h2::before, #QandA h2::after {
+      border-color: #fff; }
+
+#itComesTrue {
+  padding: 0 0 3%; }
+  #itComesTrue .pentagon {
+    display: inline-block;
+    border-top: solid 25px #ebb94d;
+    border-right: solid 25px transparent;
+    border-bottom: solid 25px transparent;
+    border-left: solid 25px transparent; }
+  #itComesTrue p {
+    margin-top: 3%;
+    font-size: 1rem;
+    color: gray; }
+  #itComesTrue .bold {
+    font-weight: bold;
+    color: black; }
+  #itComesTrue .company-voice {
+    padding: 0 20%;
+    margin-top: 3%; }
+    #itComesTrue .company-voice img {
+      width: 250px;
+      border: solid 2px #ebb94d; }
+    #itComesTrue .company-voice div {
+      padding: 5% 5%;
+      text-align: left; }
+      #itComesTrue .company-voice div .company-name {
+        text-decoration: underline; }
+
+#whatWeLearn {
+  padding: 3% 20%;
+  background-image: url(../img/classbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+  #whatWeLearn p {
+    margin-top: 3%; }
+  #whatWeLearn .table-wrap {
+    justify-content: space-between; }
+    #whatWeLearn .table-wrap table {
+      width: 47%;
+      border-collapse: collapse;
+      border: solid 2px #016ea9; }
+      #whatWeLearn .table-wrap table tr:last-child {
+        border-bottom: none; }
+      #whatWeLearn .table-wrap table tr th {
+        padding: 7% 0;
+        background-color: #016ea9;
+        color: #fff; }
+      #whatWeLearn .table-wrap table tr td {
+        padding: 7% 0;
+        font-weight: bold;
+        border-bottom: dotted 2px #cccccc;
+        background-color: #fff;
+        color: black; }
+
+#flow .flow-img {
+  margin-top: 3%; }
+#flow .flow-section {
+  background-color: #fef5e0;
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5% 5%;
+  justify-content: space-between; }
+  #flow .flow-section .flow-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #flow .flow-section .flow-icon img {
+      align-self: center; }
+    #flow .flow-section .flow-icon h4 {
+      margin-top: 10%;
+      font-size: 1.1rem; }
+  #flow .flow-section .flow-detail {
+    width: 80%;
+    text-align: left; }
+    #flow .flow-section .flow-detail p {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 3%; }
+      #flow .flow-section .flow-detail p:first-child {
+        margin: 0; }
+    #flow .flow-section .flow-detail .small-p {
+      font-weight: normal; }
+#flow .flow-section1 {
+  margin-top: 3%; }
+
+#whyBangkok {
+  background-image: url(../img/bangkokbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: left;
+  padding: 5% 5%; }
+  #whyBangkok p {
+    font-size: 1rem;
+    margin-top: 3%; }
+  #whyBangkok ul {
+    margin-top: 3%;
+    padding-left: 2%; }
+    #whyBangkok ul li {
+      list-style: disc;
+      margin-top: 2%;
+      font-weight: bold; }
+  #whyBangkok h4 {
+    margin-top: 3%; }
+
+#studentBonus {
+  background-color: #ebb94d; }
+  #studentBonus p {
+    margin-top: 3%;
+    font-size: 1rem;
+    color: #fff; }
+  #studentBonus .student-bonus {
+    margin-top: 5%; }
+    #studentBonus .student-bonus h2 {
+      width: 40%;
+      display: inline-block;
+      background-color: #ebb94d;
+      transform: translateY(25px); }
+    #studentBonus .student-bonus .student-bonus-wrap {
+      border: solid 3px #fff;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto 0;
+      padding: 5% 5%; }
+      #studentBonus .student-bonus .student-bonus-wrap .student-bonus-circle {
+        border-radius: 50%;
+        background-color: #fff;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #studentBonus .student-bonus .student-bonus-wrap .student-bonus-circle h4 {
+          font-weight: normal;
+          color: #ebb94d; }
+        #studentBonus .student-bonus .student-bonus-wrap .student-bonus-circle p {
+          margin-top: 10%;
+          font-weight: bold;
+          font-size: 0.9rem;
+          color: black; }
+
+#notVolunteer {
+  background-image: url(../img/specialdetail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+  #notVolunteer h4 {
+    margin-top: 3%;
+    line-height: 1.6; }
+  #notVolunteer .kagikakko::before, #notVolunteer .kagikakko::after {
+    border-color: #fff; }
+
+#message {
+  padding: 5% 15%; }
+  #message h4 {
+    margin-top: 3%; }
+  #message #message-detail {
+    margin-top: 6%;
+    justify-content: space-between; }
+    #message #message-detail img {
+      align-self: flex-start;
+      object-fit: contain;
+      width: 200px;
+      height: auto;
+      margin-right: 5%; }
+    #message #message-detail div {
+      text-align: left; }
+      #message #message-detail div p {
+        font-size: 0.9rem;
+        margin-top: 3%; }
+        #message #message-detail div p:first-child {
+          margin: 0; }
+      #message #message-detail div ul {
+        margin-top: 3%;
+        padding-left: 10px; }
+        #message #message-detail div ul li {
+          list-style: disc;
+          font-size: 0.9rem;
+          margin-top: 3%; }
+
+#fileGetForm {
+  background-color: #ebb94d; }
+  #fileGetForm p {
+    margin-top: 3%; }
+  #fileGetForm .fileGet-form {
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 1.5% 0.5%;
+    width: 65%;
+    appearance: none; }
+  #fileGetForm #fileGet-form {
+    margin-top: 6%;
+    border-radius: 10px;
+    padding: 1.5% 0.5%;
+    width: 65%;
+    appearance: none; }
+  #fileGetForm a {
+    display: flex;
+    background-color: #da6b64;
+    color: aliceblue;
+    padding: 0.5% 2%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 1% 2%;
+    width: 70%;
+    border-radius: 80px;
+    margin: 3% auto 0;
+    font-weight: bold;
+    font-size: 2em; }
+    #fileGetForm a:hover {
+      background-color: red; }
+
+#FAQ {
+  width: 70%;
+  margin: 0 auto; }
+  #FAQ .question-button {
+    border: solid 2px #c2c1c1;
+    padding: 2% 2%;
+    margin-top: 0.2%;
+    cursor: pointer;
+    justify-content: space-between; }
+    #FAQ .question-button:hover {
+      text-decoration: underline; }
+    #FAQ .question-button .bottom-arrow {
+      position: relative;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border-top: 5px solid #c2c1c1;
+      border-right: 5px solid #c2c1c1;
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg); }
+    #FAQ .question-button .up-arrow {
+      position: relative;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border-top: 5px solid #c2c1c1;
+      border-right: 5px solid #c2c1c1;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+  #FAQ .hide-p {
+    display: none; }
+  #FAQ .open-p {
+    padding: 2.5% 2.5%;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold; }
+  #FAQ .question-button1 {
+    margin-top: 3%; }
+
+footer {
+  background-color: #dfdddd; }
+  footer small {
+    display: block;
+    font-size: 0.7rem; }
+  footer .sns-wrap {
+    justify-content: center;
+    margin-top: 1%; }
+    footer .sns-wrap .twitter-share-button {
+      margin-right: 5px; }
+
+/*# sourceMappingURL=main.css.map */
